@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="css/grid.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/normalize.css" />
+      <script src="js/jquery.js"></script>
+      <script src="js/jquery.nicescroll.min.js"></script>
+      <script src="js/login_box_toggle.js"></script>
+      <script src="js/core.js"></script>
+        <script>                        
+        $( document ).ready(function() {
+                ws.onopen = function(){
+                        news_short()
+                }                                 
+        });  
+        </script> 
+   </head>   
+<body>
+
+<div id="menu">	
+    <div id="psa">
+      <div id="conn_icon"></div>
+      <div id="psa_info">
+         <p> System Offline! Version Alpha 1.11</p>
+      </div>
+    </div>
+   <nav>    
+      <ul>
+         <li>
+            <a href="index.html"><img alt="" src="img/icons/nav/news.png">News</a>
+         </li>
+         <li>
+            <a href="live.html"><img alt="" src="img/icons/nav/live.png">Live</a>
+         </li>
+         <li>
+            <a href="tournaments.html"><img alt="" src="img/icons/nav/tournaments.png">Tournaments</a>
+         </li>
+         <li>
+            <a href="forum.html"><img alt="" src="img/icons/nav/forums.png">Forums</a>
+         </li>
+         <li>
+            <a href="statistics.html"><img alt="" src="img/icons/nav/statistics.png">Statistics</a>
+         </li>
+         <!--         <li>
+                     <a href="betting.html"><img alt="" src="img/icons/nav/statistics.png">Betting</a>
+                  </li>-->
+         <li>
+            <a href="profile.html"><img alt="" src="img/icons/nav/profile.png">Profile</a>
+         </li>
+         <li>
+            <a id='account-panel' href="#login"><img alt="" src="img/icons/nav/profile.png">Login/Register</a>
+         </li>
+      </ul>
+   </nav>
+
+   <div class="login-small">
+      <form action='#' method='post'>
+      	<input type="text" id="pin" name="pin" style="overflow:hidden; margin-left:-10000px; position:absolute;">
+        <input type="text" id="request_token" name="request_token" style="overflow:hidden; margin-left:-10000px; position:absolute;" value="">
+        
+        <input type="text" id="username" name="username" placeholder="Username...">
+        <input type="password" id="password" name="password" placeholder="Password...">
+         <button>Login</button>
+         <div class='remember-me'>
+            <label for="remember">Remember me</label>
+            <input type="checkbox" value="yes" name="remember" id="remember" checked>
+        </div>
+        <div class='register'>
+            <a id="register" class='register-btn' href="register.html">Register an Account</a>
+      </form>     
+    </div>
+    </div>
+</div> <!-- End Menu -->
+<div id="page-wrapper">	
+        <div id="header" class='row'>
+            <div class='col-100'>
+                <img src="img/hl.jpg" alt="image"> 
+            </div>
+        </div>    
+   <div id="content-wrapper">
+      <div class="row summary">
+         <div class="col-33">
+            <div class='newslist'>
+               <h4>Upcoming Matches 23</h4> 
+               <ul>
+                  <li><span class='comment-count'><a href='#'>3</a></span><a href='#'>The start of something new</a></li>
+                  <li><span class='comment-count'><a href='#'>6</a></span><a href='#'>This is a very very long news header, don't you think?</a></li>
+                  <li><span class='comment-count'><a href='#'>99</a></span><a href='#'>Midleague is under construction</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-33">
+            <div class='newslist'> 
+               <h4>Tournament</h4>
+               <ul> 
+                  <li><span class='comment-count'><a href='#'>3</a></span><a href='#'>The start of something new</a></li>
+                  <li><span class='comment-count'><a href='#'>6</a></span><a href='#'>This is a very long news header that goes outside the box, don't you think?</a></li>
+                  <li><span class='comment-count'><a href='#'>99</a></span><a href='#'>Midleague is under construction</a></li>                
+               </ul>
+            </div>
+         </div>
+
+         <div class="col-33">
+            <div class='newslist'>
+               <h4>Notabel Live bets</h4>
+               <ul>
+                  <li><span class='comment-count'><a href='#'>3</a></span><a href='#'>The start of something new</a></li>
+                  <li><span class='comment-count'><a href='#'>6</a></span><a href='#'>This is a very long news header, don't you think?</a></li>
+                  <li><span class='comment-count'><a href='#'>99</a></span><a href='#'>Midleague is under construction</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-66">
+
+            <div class="itemHeader">
+               <h4>News</h4>
+            </div>
+            
+<!--           START FEATURED ARTICLE               -->
+            <div class="news-row">
+               <article class="news-article featured-article">
+                  <section class='article-img'>
+                     <img src="http://placehold.it/703x250" alt="image"> 
+                  </section>
+                  <section class="article-header"> 
+                     <h2>Title</h2>
+                     <div class='article-details'>
+                     	<span class='article-date'>DATUM</span> <span class='article-author'>SKAPAD AV</span>
+                     </div>
+                  </section>
+                  <section class="article-body">
+                    BESKRIVNING
+                  </section>
+
+                  <footer>
+                     <div class="footer-details">
+                        <a href='#'>read more</a>                        
+                     </div>
+                  </footer>
+                  <div class="clearfix"></div>
+               </article>
+            </div>
+
+<!--           START NORMAL ARTICLES               -->
+         
+            <div class="news-row">
+                <!-- FIRST ARTICEL! -->
+               <article class="news-article seconds-article">
+                  <section class='article-img'>                        
+                        <img id="news_s_1_img" src="http://placehold.it/227x125" alt="image"> 
+                  </section>
+                  <section class="article-header"> 
+                     <h4 id="news_s_1_title">The start of something new and awesome</h4>
+<!--                     <div class='article-details'><span class='article-date'>01/13/14 13:00</span></div>-->
+                  </section>
+                  <section class="article-body">   
+                        <p id="news_s_1_text">                        
+                        Midleague is a non-profit gaming community under construction, that focus on giving the real e-sport experience to mid level players around the world. We will be hosting tournaments with prize pools.<br>
+                        </p>
+                  </section>
+
+                  <footer>
+                     <div class="footer-details">
+                        <a href='#'>read more</a>
+                        <a class="comment-count" href='#'>comments <span>23</span></a> 
+                     </div>
+                  </footer>
+               </article>
+                <!-- END -->
+                <!-- SECOND ARTICEL! -->
+               <article class="news-article seconds-article">
+                  <section class='article-img'>
+                     <img src="http://placehold.it/227x125" alt="image"> 
+                  </section>
+                  <section class="article-header"> 
+                     <h4>The start of something new</h4>
+   <!--                  <div class='article-details'><span class='article-date'>01/13/14 13:00</span></div>-->
+                  </section>
+                  <section class="article-body">
+                     <p>
+                        Midleague is a non-profit gaming community under construction, that focus on giving the real e-sport experience to mid level players around the world. We will be hosting tournaments with prize pools.<br>
+                  </section>
+
+                  <footer>
+                     <div class="footer-details">
+                        <a href='#'>read more</a>
+                        <a class="comment-count" href='#'>comments <span>23</span></a> 
+                     </div>
+                  </footer>
+               </article>
+               <!-- END -->
+               <!-- THIRD ARTICEL! -->
+               <article class="news-article seconds-article">
+                  <section class='article-img'>
+                     <img src="http://placehold.it/227x125" alt="image"> 
+                  </section>
+                  <section class="article-header"> 
+                     <h4>The start of something new</h4>
+   <!--                  <div class='article-details'><span class='article-date'>01/13/14 13:00</span></div>-->
+                  </section>
+                  <section class="article-body">
+                     <p>
+                        Midleague is a non-profit gaming community under construction, that focus on giving the real e-sport experience to mid level players around the world. We will be hosting tournaments with prize pools.<br>
+                  </section>
+
+                  <footer>
+                     <div class="footer-details">
+                        <a href='#'>read more</a>
+                        <a class="comment-count" href='#'>comments <span>23</span></a> 
+                     </div>
+                  </footer>
+               </article>
+               <!-- END -->
+            </div>
+
+         </div>
+
+
+         <div class="col-33">
+
+            <div class="sponsors">
+               <h4>Sponsors</h4>
+               <div class="sponsor">
+                  <img src="http://placehold.it/347x70" alt="image"> 
+               </div>
+               <div class="sponsor">
+                  <img src="http://placehold.it/347x70" alt="image"> 
+               </div>
+               <div class="sponsor">
+                  <img src="http://placehold.it/347x70" alt="image"> 
+               </div>
+               <div class="sponsor">
+                  <img src="http://placehold.it/347x70" alt="image"> 
+               </div>
+               <div class="sponsor">
+                  <img src="http://placehold.it/347x70" alt="image"> 
+               </div>
+            </div>
+
+            <div class="col inner-col-v">
+               <p>something</p>
+            </div>
+            <div class="col inner-col-v">
+               <p>something</p>
+            </div>
+            <div class="col inner-col-v">
+               <p>something</p>
+            </div>
+            <div class="col inner-col-v">
+               <p>something</p>
+            </div>
+            <div class="col inner-col-v">
+               <p>something</p>
+            </div>
+            <div class="col inner-col-v">
+               <p>something</p>
+            </div>
+            <div class="col inner-col-v">
+               <p>something</p>
+            </div>
+            <div class="col inner-col-v">
+               <p>something</p>
+            </div>
+            <div class="col inner-col-v">
+               <p>something</p>
+            </div>
+            <div class="col inner-col-v">
+               <p>something</p>
+            </div>
+            <div class="col inner-col-v">
+               <p>something</p>
+            </div>
+
+         </div>
+
+      </div>
+   </div>
+
+</div> <!-- Wrapper end -->
+
+<!-- Footer + HTML/BODY ENDING  -->
+<div id="footer">
+   <footer>
+      <div class="row">
+            <ul class="col-33">
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+            </ul>
+
+
+            <ul class="col-33">
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+            </ul>
+
+
+            <ul class="col-33">
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+               <li>footer text footer text footer text</li>
+            </ul>
+        
+
+      </div>
+            <div class="clearfix"></div>
+   </footer>
+</div>
+
+</body>
+</html>
