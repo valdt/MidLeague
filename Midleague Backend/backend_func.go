@@ -7,7 +7,7 @@ import (
 	"database/sql"
 	"time"
 	"log"
-	_ "github.com/go-sql-driver/mysql"
+  _ "github.com/go-sql-driver/mysql"
 	"encoding/json"
 	)
 // END IMPORT
@@ -49,7 +49,7 @@ func db_session_new(ip string, code int){
 	return
 }
 
-func db_news_get() [3][6]string {
+func db_news_get_short() [3][6]string {
 	db := db_connect()
 	defer db.Close()
 
@@ -103,14 +103,56 @@ func db_news_get() [3][6]string {
 	}
 	return s	
 }
+
+func db_news_get_long() [1][8]string {
+	db := db_connect()
+	defer db.Close()
+
+	var (
+		//date string
+		img string
+		title string
+		author string
+		//text string
+		date string
+		text string
+		comments string
+	)
+	rows, err := db.Query("SELECT comments, img, title, author, text, date FROM news ORDER BY id LIMIT 1")
+	if err != nil {	log.Fatal(err) }	
+	var s [1][8]string
+	code := "402"
+	for rows.Next() {
+		err = rows.Scan(&comments, &img, &title, &author, &text, &date)
+			if err != nil {	log.Fatal(err) }			
+		s[0][0] = code
+		s[0][1] = comments
+		s[0][2] = img
+		s[0][3] = title
+		s[0][4] = author
+		s[0][5] = text
+		s[0][6] = date
+		s[0][7] = author
+	}
+		return s	
+}
 // END Database Handling
 
 // Client Servning
-func news_delivery() []byte {
-	s := db_news_get()	
-	b, err := json.Marshal(s)
-	if err != nil  {
-		log.Fatal(err)		
-	}
-	return b
+func news_delivery(size string) []byte {
+	switch {
+    case size == "long":
+        s := db_news_get_long()
+		b, err := json.Marshal(s)
+		if err != nil  { log.Fatal(err)	}
+		return b
+    case size == "short":
+        s := db_news_get_short()
+		b, err := json.Marshal(s)
+		if err != nil  { log.Fatal(err)	}
+		return b
+    }
+		b, err := json.Marshal("error")
+		if err != nil  { log.Fatal(err)	}
+		return b
 }

@@ -60,7 +60,9 @@ func wsHandler(w http.ResponseWriter, r *http.Request){
 			case m.Msg == "400":
 				
 			case m.Msg == "401":
-				conn.WriteMessage(websocket.TextMessage, news_delivery())				
+				conn.WriteMessage(websocket.TextMessage, news_delivery("short"))
+			case m.Msg == "402":
+				conn.WriteMessage(websocket.TextMessage, news_delivery("long"))				
 		}
 
 		
