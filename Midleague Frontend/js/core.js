@@ -22,6 +22,9 @@
 					if (obj[0][0] == "402") {
 							window.news_long = obj;												
 					}
+					if (obj[0][0] == "403") {
+							window.sponsor_index = obj;												
+					}
 
 				
 				
@@ -63,7 +66,7 @@
 
 	function news_short() {
 		send('{"msg":"401"}');
-		var titleTimer1 = setInterval(function(){
+		var datatimer = setInterval(function(){
 			if (window.news_short[0][0] == "401"){
 				document.getElementById("news_s_1_comments").innerHTML = window.news_short[0][1];
 				document.getElementById("news_s_1_img").src = window.news_short[0][2];
@@ -80,13 +83,13 @@
 				document.getElementById("news_s_3_title").innerHTML = window.news_short[2][3];
 				document.getElementById("news_s_3_text").innerHTML = window.news_short[2][5];
 
-				clearInterval(titleTimer1);
+				clearInterval(datatimer);
 			} 
 		}, 1000);
 	}
 	function news_long() {
 		send('{"msg":"402"}');
-		var titleTimer1 = setInterval(function(){
+		var datatimer = setInterval(function(){
 			if (window.news_long[0][0] == "402"){
 				document.getElementById("news_big_comments").innerHTML = window.news_long[0][1];
 				document.getElementById("news_big_img").src = window.news_long[0][2];
@@ -95,7 +98,30 @@
 				document.getElementById("news_big_date").innerHTML = window.news_long[0][6];
 				document.getElementById("news_big_author").innerHTML = window.news_long[0][7];
 
-				clearInterval(titleTimer1);
+				clearInterval(datatimer);
 			} 
+		}, 1000);
+	}
+	function sponsor_index() {
+		send('{"msg":"403"}');
+		var datatimer = setInterval(function(){
+		if (window.sponsor_index[0][0] == "403"){
+			document.getElementById("sponsors_index_url_1").href = window.sponsor_index[0][1];
+			document.getElementById("sponsors_index_img_1").src = window.sponsor_index[0][2];
+
+			document.getElementById("sponsors_index_url_2").href = window.sponsor_index[1][1];
+			document.getElementById("sponsors_index_img_2").src = window.sponsor_index[1][2];
+
+			document.getElementById("sponsors_index_url_3").href = window.sponsor_index[2][1];
+			document.getElementById("sponsors_index_img_3").src = window.sponsor_index[2][2];
+
+			document.getElementById("sponsors_index_url_4").href = window.sponsor_index[3][1];
+			document.getElementById("sponsors_index_img_4").src = window.sponsor_index[3][2];
+
+			document.getElementById("sponsors_index_url_5").href = window.sponsor_index[4][1];
+			document.getElementById("sponsors_index_img_5").src = window.sponsor_index[4][2];
+
+			clearInterval(datatimer);
+		} 
 		}, 1000);
 	}

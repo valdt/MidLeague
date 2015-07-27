@@ -62,7 +62,7 @@ func db_news_get_short() [3][6]string {
 		text_short string
 		comments string
 	)
-	rows, err := db.Query("SELECT comments, img, title, author, text_short FROM news ORDER BY id LIMIT 3")
+	rows, err := db.Query("SELECT comments, img, title, author, text_short FROM news ORDER BY id LIMIT 3 OFFSET 1")
 	if err != nil {
 			log.Fatal(err)
 	}
@@ -121,7 +121,7 @@ func db_news_get_long() [1][8]string {
 	rows, err := db.Query("SELECT comments, img, title, author, text, date FROM news ORDER BY id LIMIT 1")
 	if err != nil {	log.Fatal(err) }	
 	var s [1][8]string
-	code := "402"
+	code := "402"	
 	for rows.Next() {
 		err = rows.Scan(&comments, &img, &title, &author, &text, &date)
 			if err != nil {	log.Fatal(err) }			
@@ -135,6 +135,56 @@ func db_news_get_long() [1][8]string {
 		s[0][7] = author
 	}
 		return s	
+}
+
+func db_sponssor_index() []byte{
+	db := db_connect()
+	defer db.Close()
+
+	var (
+		//date string
+		img string
+		url string
+	)
+	rows, err := db.Query("SELECT img, url FROM sponsors LIMIT 5")
+	if err != nil {	log.Fatal(err) }	
+	
+	var s [5][3]string
+	code := "403"
+	num := 1
+	for rows.Next() {
+		err = rows.Scan(&img, &url)
+			if err != nil {	log.Fatal(err) }
+		switch {
+			case num == 1:			
+				s[0][0] = code
+				s[0][1] = img
+				s[0][2] = url
+				num = num + 1
+			case num == 2:			
+				s[1][0] = code
+				s[1][1] = img
+				s[1][2] = url
+				num = num + 1
+			case num == 3:			
+				s[2][0] = code
+				s[2][1] = img
+				s[2][2] = url
+				num = num + 1
+			case num == 4:			
+				s[3][0] = code
+				s[3][1] = img
+				s[3][2] = url
+				num = num + 1
+			case num == 5:			
+				s[4][0] = code
+				s[4][1] = img
+				s[4][2] = url	
+		}
+	}
+		b, err := json.Marshal(s)
+		if err != nil  { log.Fatal(err)	}
+		return b	
 }
 // END Database Handling
 
