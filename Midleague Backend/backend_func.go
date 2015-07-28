@@ -62,7 +62,7 @@ func db_news_get_short() [3][6]string {
 		text_short string
 		comments string
 	)
-	rows, err := db.Query("SELECT comments, img, title, author, text_short FROM news ORDER BY id LIMIT 3 OFFSET 1")
+	rows, err := db.Query("SELECT comments, img, title, author, text_short FROM news ORDER BY id DESC LIMIT 3 OFFSET 1")
 	if err != nil {
 			log.Fatal(err)
 	}
@@ -118,7 +118,7 @@ func db_news_get_long() [1][8]string {
 		text string
 		comments string
 	)
-	rows, err := db.Query("SELECT comments, img, title, author, text, date FROM news ORDER BY id LIMIT 1")
+	rows, err := db.Query("SELECT comments, img, title, author, text, date FROM news ORDER BY id DESC LIMIT 1")
 	if err != nil {	log.Fatal(err) }	
 	var s [1][8]string
 	code := "402"	

@@ -22,7 +22,7 @@ func wsHandler(w http.ResponseWriter, r *http.Request){
 		}
 	
 	// Incoming message handling.
-	for {
+	for {		
 		_, msg, err := conn.ReadMessage()
 			if err != nil {
 				log.Println(err)
