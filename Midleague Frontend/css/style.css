@@ -163,11 +163,12 @@ ul {
   padding-bottom: 0px;
 }
 .newslist {
+
   background: #e8e8e8;
 }
 .newslist h4 {
   text-align: center;
-  background: #222;
+  background: #466277;
   padding: 8px;
   margin: 0;
 }
@@ -210,6 +211,36 @@ ul {
   text-align: center;
   margin-right: 5px;
 }
+.populareBets {
+  background: #e8e8e8;
+}
+.populareBets h4 {
+  text-align: center;
+  background: #466277;
+  padding: 8px;
+  margin: 0;
+}
+.populareBets ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #222;
+}
+.populareBets ul li {
+  padding: 8px 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.populareBets ul li a {
+  color: #222;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+
 #page-wrapper {
   position: relative;
   width: 1080px;
@@ -262,7 +293,7 @@ ul {
 }
 .itemHeader {
   text-align: center;
-  background: #222;
+  background: #466277;
   margin: 0;
 }
 .itemHeader h4 {

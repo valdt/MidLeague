@@ -13,22 +13,14 @@
         <script>                        
         $( document ).ready(function() {
                 ws.onopen = function(){
-                        news_long()
-                        news_short()
-                        sponsor_index()
+                        
                 }                                 
         });  
         </script> 
    </head>   
 <body>
 
-<div id="menu">	
-    <div id="psa">
-      <div id="conn_icon"></div>
-      <div id="psa_info">
-         <p id="psa_info_tag">  Failed to establish connection to the server.</br> Please try again in a few minutes</p>
-      </div>
-    </div>
+<div id="menu">
    <nav>    
       <ul>
          <li>
@@ -46,9 +38,6 @@
          <li>
             <a href="statistics.html"><img alt="" src="img/icons/nav/statistics.png">Statistics</a>
          </li>
-         <!--         <li>
-                     <a href="betting.html"><img alt="" src="img/icons/nav/statistics.png">Betting</a>
-                  </li>-->
          <li>
             <a href="profile.html"><img alt="" src="img/icons/nav/profile.png">Profile</a>
          </li>
@@ -77,43 +66,34 @@
     </div>
 </div> 
 <!-- End Menu -->
-<div id="page-wrapper">	
-        <div id="header" class='row'>
-            <div class='col-100'>
-                <img src="img/hl.jpg" alt="image"> 
-            </div>
-        </div>    
+<div id="page-wrapper">	  
    <div id="content-wrapper">
-
- <!-- Old Menu spot. -->
-
       <div class="row">
-         <div class="col-66">
-
-            <div class="itemHeader">
-               <h4>News</h4>
-            </div>
-            
+         <div class="col-66">            
 <!--           START FEATURED ARTICLE               -->
             <div class="news-row">
                <article class="news-article featured-article">
                   <section class='article-img'>
-                     <img id="news_big_img" src="http://placehold.it/703x250" alt="image"> 
+                     <img id="news_big_img" src="https://placekitten.com/700/250" alt="image">
                   </section>
                   <section class="article-header"> 
-                     <h2 id="news_big_title"></h2>
+                     <h2>Midleague</h2>
                      <div class='article-details'>
-                     	<span class='article-date'><custom id="news_big_date">  </custom></span> <span class='article-author'><custom id="news_big_author">  </custom></span>
+                     	<span class='article-date'>2015-07-28 21:47:47</span> <span class='article-author'>yoieh</span>
                      </div>
                   </section>
                   <section class="article-body">
-                    <p id="news_big_text">Loading...</p>
+                    <p>Midleague is a non-profit gaming community under construction, that focus on giving the real e-sport experience to mid level players around the world. We will be hosting tournaments with prize pools.
+
+This a haven where players can compete seriously at their own level. Its a perfect training ground to sharpen your skills until you and you’re team are ready for the big league. Beside hosting tournaments we will also have a live-betting system bringing you statistics and taking the action on step further. Also we plan on rewarding our early followers with a handful of free subscriptions during the beta period.
+
+Site is planned to launch late 2013 or early 2014. *cough* 2016 *cough*</p>
                   </section>
 
                   <footer>
                      <div class="footer-details">
-                        <a href='#'>read more</a>                        
-                        <a class="comment-count" href='#'>comments <span><custom id="news_big_comments">0</custom></span></a>                      
+                        <a href='read.html'>read more</a>                        
+                        <a class="comment-count" href='#'>comments <span><custom id="newsFeaturedComments">{N/A}</custom></span></a>                      
                      </div>
                   </footer>
                   <div class="clearfix"></div>
@@ -126,22 +106,22 @@
                 <!-- FIRST ARTICEL! -->
                <article class="news-article seconds-article">
                   <section class='article-img'>                        
-                        <img id="news_s_1_img" src="http://placehold.it/227x125" alt="image"> 
+                        <img src="http://hydra-media.cursecdn.com/lol.gamepedia.com/thumb/d/db/Fnaticlogo.png/300px-Fnaticlogo.png?version=9e33bc7d752a5b08345ebec30d0669c4" alt="image"> 
                   </section>
                   <section class="article-header"> 
-                     <h4 id="news_s_1_title">The start of something new and awesome</h4>
+                     <h4>Midleague buys Fnatic!</h4>
 <!--                     <div class='article-details'><span class='article-date'>01/13/14 13:00</span></div>-->
                   </section>
                   <section class="article-body">   
-                        <p id="news_s_1_text">                        
-                        Midleague is a non-profit gaming community under construction, that focus on giving the real e-sport experience to mid level players around the world. We will be hosting tournaments with prize pools.<br>
+                        <p>                        
+                        Midleague is a non-profit gaming community under construction, thats why we decided to buy the esport team Fnatic.
                         </p>
                   </section>
 
                   <footer>
                      <div class="footer-details">
                         <a href='#'>read more</a>
-                        <a class="comment-count" href='#'>comments <span><custom id="news_s_1_comments">0</custom></span></a> 
+                        <a class="comment-count" href='#'>comments <span><custom id="newsFirstComments">{N/A}</custom></span></a> 
                      </div>
                   </footer>
                </article>
@@ -149,22 +129,21 @@
                 <!-- SECOND ARTICEL! -->
                <article class="news-article seconds-article">
                   <section class='article-img'>                        
-                        <img id="news_s_2_img" src="http://placehold.it/227x125" alt="image"> 
+                        <img src="http://s15.postimg.org/b274q2c0b/1486869_10201321028171263_451799306_n_jpg_oh_eb8.jpg" alt="image"> 
                   </section>
                   <section class="article-header"> 
-                     <h4 id="news_s_2_title">The start of something new and awesome</h4>
+                     <h4>MidLeague coder under arrest!</h4>
 <!--                     <div class='article-details'><span class='article-date'>01/13/14 13:00</span></div>-->
                   </section>
                   <section class="article-body">   
-                        <p id="news_s_2_text">                        
-                        Midleague is a non-profit gaming community under construction, that focus on giving the real e-sport experience to mid level players around the world. We will be hosting tournaments with prize pools.<br>
-                        </p>
+                        <p>The takedown of the underground drug market Silk Road was apparently just the beginning. Since then, authorities have arrested Silk Road customers and dealers in Seattle, the UK, and Sweden—and promise more to come.
+</p>
                   </section>
 
                   <footer>
                      <div class="footer-details">
                         <a href='#'>read more</a>
-                        <a class="comment-count" href='#'>comments <span><custom id="news_s_2_comments">0</custom></span></a> 
+                        <a class="comment-count" href='#'>comments <span><custom id="newsSecondComments">{N/A}</custom></span></a>  
                      </div>
                   </footer>
                </article>
@@ -172,22 +151,21 @@
                <!-- THIRD ARTICEL! -->
                <article class="news-article seconds-article">
                   <section class='article-img'>                        
-                        <img id="news_s_3_img" src="http://placehold.it/227x125" alt="image"> 
+                        <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" alt="image"> 
                   </section>
                   <section class="article-header"> 
-                     <h4 id="news_s_3_title">The start of something new and awesome</h4>
-<!--                     <div class='article-details'><span class='article-date'>01/13/14 13:00</span></div>-->
+                     <h4>Fork us!</h4>
                   </section>
                   <section class="article-body">   
-                        <p id="news_s_3_text">                        
-                        Midleague is a non-profit gaming community under construction, that focus on giving the real e-sport experience to mid level players around the world.
+                        <p>                        
+                        No programmer is better then an entire community that's why we decided to push all our coder to GitHub. So that we can bring this project to the level of quality it deserves.
                         </p>
                   </section>
 
                   <footer>
                      <div class="footer-details">
                         <a href='#'>read more</a>
-                        <a class="comment-count" href='#'>comments <span><custom id="news_s_3_comments">0</custom></span></a> 
+                        <a class="comment-count" href='#'>comments <span><custom id="newsThirdComments">{N/A}</custom></span></a>  
                      </div>
                   </footer>
                </article>
@@ -198,34 +176,15 @@
 
 
          <div class="col-33">
-         
-            <div class='newslist'>               
-               <h4>Upcoming Matches 23</h4> 
-               <ul>                  
-                  <li><span class='comment-count'><a href='#'>3</a></span><a href='#'>The start of something new</a></li>
-                  <li><span class='comment-count'><a href='#'>6</a></span><a href='#'>This is a very very long news header, don't you think?</a></li>
-                  <li><span class='comment-count'><a href='#'>99</a></span><a href='#'>Midleague is under construction</a></li>
-               </ul>
-            </div>
 
             <div class='newslist'>               
-               <h4>Upcoming Matches 23</h4> 
+               <h4>Populare bets</h4> 
                <ul>                  
-                  <li><span class='comment-count'><a href='#'>3</a></span><a href='#'>The start of something new</a></li>
-                  <li><span class='comment-count'><a href='#'>6</a></span><a href='#'>This is a very very long news header, don't you think?</a></li>
-                  <li><span class='comment-count'><a href='#'>99</a></span><a href='#'>Midleague is under construction</a></li>
+                  <li><p>{NAME} vs {NAME} at {ODDS} with {POOL}</p></li>
+                  <li><p>{NAME} vs {NAME} at {ODDS} with {POOL}</p></li>
+                  <li><p>{NAME} vs {NAME} at {ODDS} with {POOL}</p></li>
                </ul>
             </div>
-
-            <div class='newslist'>               
-               <h4>Upcoming Matches 23</h4> 
-               <ul>                  
-                  <li><span class='comment-count'><a href='#'>3</a></span><a href='#'>The start of something new</a></li>
-                  <li><span class='comment-count'><a href='#'>6</a></span><a href='#'>This is a very very long news header, don't you think?</a></li>
-                  <li><span class='comment-count'><a href='#'>99</a></span><a href='#'>Midleague is under construction</a></li>
-               </ul>
-            </div>
-
             <div class="sponsors">
                <h4>Sponsors</h4>
                <div class="sponsor">

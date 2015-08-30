@@ -87,8 +87,8 @@
 			} 
 		}, 1000);
 	}
-	function news_long() {
-		send('{"msg":"402"}');
+	function news_long(artikelId) {
+		send('{"msg":"402","id":"artikelId"}');
 		var datatimer = setInterval(function(){
 			if (window.news_long[0][0] == "402"){
 				document.getElementById("news_big_comments").innerHTML = window.news_long[0][1];
@@ -124,4 +124,12 @@
 			clearInterval(datatimer);
 		} 
 		}, 1000);
+	}
+
+	function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		vars[key] = value;
+		});
+			return vars;
 	}
