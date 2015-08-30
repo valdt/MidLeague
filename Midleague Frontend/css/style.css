@@ -135,7 +135,7 @@ ul {
   background: #ddd;
 }
 .sponsors {
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .sponsors h4 {
   text-align: center;
@@ -255,7 +255,7 @@ ul {
 }
 #header img {
   margin: 0 0 0 0;
-  height: auto;
+  height: 150px;
   width: 100%;
   vertical-align: bottom;
   position: relative;
@@ -368,7 +368,7 @@ ul {
 }
 .featured-article .article-img img {
   width: 703px;
-  height: 250px;
+  height: 200px;
 }
 .featured-article .article-body {
   column-count: 2;

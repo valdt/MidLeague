@@ -5,7 +5,7 @@
 			alert("Your browser dont support Websockets, this site wont function with out it.");
 			window.location.replace("https://www.mozilla.org");
 		}
-		ws = new WebSocket("ws://192.168.0.5:1234/ws");
+		ws = new WebSocket("ws://127.0.0.1:1234/ws");
 			ws.onopen = function(){
 			}			
 			/* Live */
@@ -106,20 +106,20 @@
 		send('{"msg":"403"}');
 		var datatimer = setInterval(function(){
 		if (window.sponsor_index[0][0] == "403"){
-			document.getElementById("sponsors_index_url_1").href = window.sponsor_index[0][1];
-			document.getElementById("sponsors_index_img_1").src = window.sponsor_index[0][2];
+			document.getElementById("sponsors_index_url_1").href = window.sponsor_index[0][2];
+			document.getElementById("sponsors_index_img_1").src = window.sponsor_index[0][1];
 
-			document.getElementById("sponsors_index_url_2").href = window.sponsor_index[1][1];
-			document.getElementById("sponsors_index_img_2").src = window.sponsor_index[1][2];
+			document.getElementById("sponsors_index_url_2").href = window.sponsor_index[1][2];
+			document.getElementById("sponsors_index_img_2").src = window.sponsor_index[1][1];
 
-			document.getElementById("sponsors_index_url_3").href = window.sponsor_index[2][1];
-			document.getElementById("sponsors_index_img_3").src = window.sponsor_index[2][2];
+			document.getElementById("sponsors_index_url_3").href = window.sponsor_index[2][2];
+			document.getElementById("sponsors_index_img_3").src = window.sponsor_index[2][1];
 
-			document.getElementById("sponsors_index_url_4").href = window.sponsor_index[3][1];
-			document.getElementById("sponsors_index_img_4").src = window.sponsor_index[3][2];
+			document.getElementById("sponsors_index_url_4").href = window.sponsor_index[3][2];
+			document.getElementById("sponsors_index_img_4").src = window.sponsor_index[3][1];
 
-			document.getElementById("sponsors_index_url_5").href = window.sponsor_index[4][1];
-			document.getElementById("sponsors_index_img_5").src = window.sponsor_index[4][2];
+			document.getElementById("sponsors_index_url_5").href = window.sponsor_index[4][2];
+			document.getElementById("sponsors_index_img_5").src = window.sponsor_index[4][1];
 
 			clearInterval(datatimer);
 		} 
