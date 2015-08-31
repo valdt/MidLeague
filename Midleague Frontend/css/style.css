@@ -162,15 +162,20 @@ ul {
 .sponsors .sponsor:last-child {
   padding-bottom: 0px;
 }
-.newslist {
-
-  background: #e8e8e8;
-}
-.newslist h4 {
+.StandardH4 {
   text-align: center;
   background: #466277;
   padding: 8px;
   margin: 0;
+}
+.newslistWraper {
+  padding-left: 0px;
+}
+
+.newslist {
+  width: 100%;
+  float: left;
+  background: #e8e8e8;
 }
 .newslist ul {
   padding: 0;
@@ -183,6 +188,7 @@ ul {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .newslist ul li a {
@@ -309,10 +315,15 @@ ul {
 .news-article footer {
   padding: 10px;
 }
+
 .news-article .article-header,
 .news-article footer {
   background: #333;
   margin: 0;
+}
+
+.article-header {
+  background: #466277 !important;
 }
 .news-article .article-img {
   padding: 0 ;
