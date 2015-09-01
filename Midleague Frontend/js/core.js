@@ -5,14 +5,13 @@
 			alert("Your browser dont support Websockets, this site wont function with out it.");
 			window.location.replace("https://www.mozilla.org");
 		}
+
 		ws = new WebSocket("ws://127.0.0.1:1234/ws");
 			ws.onopen = function(){
 			}			
 			/* Live */
-			ws.onmessage = function(e){
-				document.getElementById("psa_info_tag").innerHTML = "System online! - Connection logged";			
-				window.onbeforeunload = ws.onclose;
-				conn_icon_animator("#conn_icon", "green");					
+			ws.onmessage = function(e){							
+				window.onbeforeunload = ws.onclose;				
 				window.online = 1;
 				receive(e.data);				
 				var obj = JSON.parse(e.data);							
@@ -51,18 +50,6 @@
 				$("#conn_icon").css("background-color","red");				
 			}
 	});
-
-	function conn_icon_animator (div , new_color) {
-		$(div).fadeOut(100);
-		$(div).css("background-color",new_color);
-    	$(div).fadeIn(100);
-	}
-	function send(msg) {
-		ws.send(msg);
-	}
-	function receive(msg) {
-		conn_icon_animator("#conn_icon", "green");
-	}
 
 	function news_short() {
 		send('{"msg":"401"}');
@@ -132,4 +119,18 @@
 		vars[key] = value;
 		});
 			return vars;
+	}
+	function receive(msg) {
+		conn_icon_animator("#conn_icon", "green");
+	}
+	function send(sender, group, id, flag, data) {
+		ws.send("sender":"DATA","group":"DATA","id":"DATA","flag":"DATA","data":"DATA");
+	}
+	function getNewsCommentCount (){
+
+
+
+		                 send({"firstName":"John", "lastName":"Doe"})
+                  "sender":"DATA","group":"DATA","id":"DATA","flag":"DATA","data":"DATA"
+                  send({"sender":"DATA","group":"DATA","id":"DATA","flag":"DATA","data":"DATA"})
 	}
